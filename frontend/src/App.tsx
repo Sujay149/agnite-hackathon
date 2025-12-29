@@ -94,62 +94,46 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Professional Header */}
-      <header className="bg-navy-900 border-b-4 border-safety-blue-500 shadow-lg">
-        <div className="max-w-7xl mx-auto px-6 py-5">
+      {/* Refined Professional Header */}
+      <header className="bg-navy-900 border-b border-steel-700 shadow-sm">
+        <div className="max-w-7xl mx-auto px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-white tracking-tight">
+              <h1 className="text-2xl font-bold text-white tracking-tight leading-tight">
                 Manufacturing SOP & Safety Assistant
               </h1>
-              <p className="text-steel-300 text-sm mt-1 font-medium">
-                Educational Explanation System
+              <p className="text-steel-400 text-sm mt-1.5 font-normal">
+                Educational explanation system for safety procedures
               </p>
             </div>
-            <div className="flex items-center space-x-2 bg-navy-800 px-4 py-2 rounded-lg">
-              <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
-              <span className="text-steel-300 text-xs font-medium">SYSTEM ACTIVE</span>
+            <div className="flex items-center space-x-2 px-3 py-1.5 bg-navy-800 bg-opacity-50 rounded">
+              <div className="w-1.5 h-1.5 bg-teal-500 rounded-full"></div>
+              <span className="text-steel-400 text-xs font-medium uppercase tracking-wide">Active</span>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Critical Safety Disclaimer Banner */}
-      <div className="bg-warning-50 border-y border-warning-400">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      {/* Refined Compliance Notice Banner */}
+      <div className="bg-warning-50 border-b border-warning-200">
+        <div className="max-w-7xl mx-auto px-8 py-3">
           <div className="flex items-start space-x-3">
-            <div className="flex-shrink-0 mt-0.5">
-              <svg className="h-5 w-5 text-warning-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex-shrink-0">
+              <svg className="h-4 w-4 text-warning-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-sm font-bold text-warning-900 uppercase tracking-wide">
-                Safety Notice - Explanation Only
-              </h3>
-              <div className="mt-2 text-sm text-warning-800 space-y-1">
-                <p className="font-semibold">This system provides educational explanations only and cannot:</p>
-                <div className="grid grid-cols-2 gap-x-6 gap-y-1 mt-2">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-warning-600">✗</span>
-                    <span>Approve or authorize actions</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-warning-600">✗</span>
-                    <span>Provide operational guidance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-warning-600">✗</span>
-                    <span>Validate safety compliance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-warning-600">✗</span>
-                    <span>Replace human supervision</span>
-                  </div>
-                </div>
-                <p className="mt-2 font-bold text-warning-900 bg-warning-100 px-2 py-1 rounded inline-block">
-                  ⚠ Always consult authorized personnel before performing work
+              <div className="flex items-baseline justify-between">
+                <h3 className="text-xs font-bold text-warning-900 uppercase tracking-wide">
+                  Compliance Notice — Explanation Only
+                </h3>
+                <p className="text-xs font-semibold text-warning-900 hidden md:block">
+                  Consult authorized personnel before performing work
                 </p>
+              </div>
+              <div className="text-xs text-warning-800 mt-1.5">
+                <span className="font-medium">Cannot approve actions, provide operational guidance, validate compliance, or replace human supervision</span>
               </div>
             </div>
           </div>
@@ -157,18 +141,18 @@ const App: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl mx-auto px-6 py-8 w-full">
-        <div className="grid grid-cols-1 gap-6">
+      <main className="flex-1 max-w-7xl mx-auto px-8 py-5 w-full">
+        <div className="grid grid-cols-1 gap-5">
           
-          {/* SOP Selection Card */}
-          <div className="bg-white rounded-lg shadow-sm border border-steel-200">
-            <div className="px-6 py-4 border-b border-steel-200 bg-steel-50">
-              <h2 className="text-sm font-bold text-steel-900 uppercase tracking-wide">
+          {/* Refined SOP Selection Card */}
+          <div className="bg-steel-800 bg-opacity-5 rounded-lg shadow-sm border border-steel-300">
+            <div className="px-8 py-3.5 border-b border-steel-300">
+              <h2 className="text-xs font-bold text-steel-700 uppercase tracking-wider">
                 Document Selection
               </h2>
             </div>
-            <div className="p-6">
-              <label htmlFor="sop-select" className="block text-sm font-semibold text-steel-700 mb-3">
+            <div className="p-5">
+              <label htmlFor="sop-select" className="block text-sm font-semibold text-steel-800 mb-3">
                 Select Standard Operating Procedure (Optional)
               </label>
               <select
@@ -176,9 +160,9 @@ const App: React.FC = () => {
                 value={selectedSOPId || ''}
                 onChange={(e) => setSelectedSOPId(e.target.value || null)}
                 disabled={loading}
-                className="w-full px-4 py-3 bg-white border-2 border-steel-300 rounded-lg text-steel-900 font-medium focus:outline-none focus:ring-2 focus:ring-safety-blue-500 focus:border-transparent disabled:bg-steel-100 disabled:cursor-not-allowed transition-all"
+                className="w-full px-5 py-3.5 bg-white border border-steel-300 rounded text-steel-900 font-medium text-sm focus:outline-none focus:ring-1 focus:ring-safety-blue-500 focus:border-safety-blue-500 disabled:bg-steel-100 disabled:cursor-not-allowed transition-colors"
               >
-                  <option value="">General Safety Questions</option>
+                <option value="">General Safety Questions</option>
                 {sops.map((sop) => (
                   <option key={sop.id} value={sop.id}>
                     {sop.title}
@@ -188,23 +172,23 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Chat Interface Card */}
-          <div className="bg-white rounded-lg shadow-sm border border-steel-200 flex flex-col" style={{ height: '580px' }}>
+          {/* Refined Chat Interface Card */}
+          <div className="bg-white rounded-lg shadow-sm border border-steel-300 flex flex-col" style={{ height: '500px' }}>
             
-            {/* Chat Header */}
-            <div className="px-6 py-4 border-b border-steel-200 bg-gradient-to-r from-navy-900 to-navy-800">
+            {/* Refined Chat Header */}
+            <div className="px-8 py-3.5 border-b border-steel-300 bg-steel-800 bg-opacity-5">
               <div className="flex items-center justify-between">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wide">
+                <h2 className="text-xs font-bold text-steel-700 uppercase tracking-wider">
                   Conversation
                 </h2>
-                <div className="text-xs text-steel-300 font-medium">
+                <div className="text-xs text-steel-600 font-medium">
                   {messages.length} message{messages.length !== 1 ? 's' : ''}
                 </div>
               </div>
             </div>
 
             {/* Messages Container */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-5 bg-gray-50">
+            <div className="flex-1 overflow-y-auto p-5 space-y-5 bg-gray-50">
               {messages.length === 0 ? (
                 <div className="h-full flex items-center justify-center">
                   <div className="text-center max-w-md">
@@ -233,7 +217,7 @@ const App: React.FC = () => {
                     <div
                       className={`max-w-3xl rounded-lg shadow-sm ${
                         message.role === 'user'
-                          ? 'bg-safety-blue-500 text-white'
+                          ? 'bg-steel-800 text-white'
                           : message.filtered
                           ? 'bg-warning-50 border-2 border-warning-400'
                           : 'bg-white border border-steel-200'
@@ -309,7 +293,7 @@ const App: React.FC = () => {
             </div>
 
             {/* Input Area */}
-            <div className="border-t-2 border-steel-200 bg-white px-6 py-4">
+            <div className="border-t border-steel-300 bg-white px-8 py-4">
               {error && (
                 <div className="mb-4 p-3 bg-error-50 border-l-4 border-error-500 rounded-r text-error-800 text-sm flex items-start space-x-2">
                   <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -318,20 +302,20 @@ const App: React.FC = () => {
                   <span className="font-medium">{error}</span>
                 </div>
               )}
-              <div className="flex space-x-3">
+              <div className="flex space-x-4">
                 <textarea
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about safety procedures, PPE requirements, emergency protocols..."
                   disabled={loading}
-                  className="flex-1 px-4 py-3 bg-white border-2 border-steel-300 rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:ring-safety-blue-500 focus:border-transparent disabled:bg-steel-100 disabled:cursor-not-allowed resize-none transition-all"
+                  className="flex-1 px-5 py-3.5 bg-white border border-steel-300 rounded text-steel-900 placeholder-steel-500 text-sm focus:outline-none focus:ring-1 focus:ring-safety-blue-500 focus:border-safety-blue-500 disabled:bg-steel-100 disabled:cursor-not-allowed resize-none transition-colors"
                   rows={2}
                 />
                 <button
                   onClick={sendMessage}
                   disabled={loading || !inputValue.trim()}
-                  className="px-8 py-3 bg-safety-blue-600 text-white rounded-lg font-bold uppercase tracking-wide text-sm hover:bg-safety-blue-700 disabled:bg-steel-300 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md disabled:shadow-none"
+                  className="px-10 py-3.5 bg-safety-blue-600 text-white rounded font-bold uppercase tracking-wide text-xs hover:bg-safety-blue-700 disabled:bg-steel-400 disabled:cursor-not-allowed transition-colors shadow-sm hover:shadow disabled:shadow-none"
                 >
                   {loading ? (
                     <span className="flex items-center space-x-2">
@@ -358,26 +342,26 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      {/* Professional Footer */}
-      <footer className="bg-navy-900 border-t-4 border-steel-700 mt-auto">
-        <div className="max-w-7xl mx-auto px-6 py-6">
+      {/* Refined Professional Footer */}
+      <footer className="bg-navy-900 border-t border-steel-700 mt-auto">
+        <div className="max-w-7xl mx-auto px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-steel-400 text-sm font-medium">
+              <p className="text-steel-400 text-sm font-semibold">
                 Manufacturing SOP & Safety Assistant
               </p>
-              <p className="text-steel-500 text-xs mt-1">
+              <p className="text-steel-500 text-xs mt-1.5 font-medium">
                 For Educational and Training Purposes Only
               </p>
             </div>
             <div className="flex items-center space-x-6 text-xs text-steel-400">
               <span className="flex items-center space-x-2">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                 </svg>
                 <span className="font-semibold">Human supervision required</span>
               </span>
-              <span className="hidden md:block">•</span>
+              <span className="hidden md:block text-steel-600">•</span>
               <span className="font-medium">© 2025</span>
             </div>
           </div>
