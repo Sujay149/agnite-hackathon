@@ -15,12 +15,20 @@ class AIService:
     """Service for generating AI explanations with safety controls"""
     
     # Banned action verbs that indicate operational instructions
+    # These patterns look for imperative/instructional use, not descriptive use
     BANNED_VERBS = [
-        r'\b(disconnect|lock|attach|turn|switch|press|isolate|activate|deactivate)\b',
-        r'\b(connect|remove|insert|pull|push|rotate|flip|engage|disengage)\b',
-        r'\b(install|uninstall|mount|unmount|fasten|unfasten|secure)\b',
-        r'\b(open|close|start|stop|shut\s+down|power\s+on|power\s+off)\b',
-        r'\b(apply|place|position|adjust|verify|check|test|inspect)\b',
+        # Strong operational verbs (always banned)
+        r'\b(disconnect|lock|attach|turn|switch|press|isolate|activate|deactivate)\s+(the|a|an|it)\b',
+        r'\b(connect|remove|insert|pull|push|rotate|flip|engage|disengage)\s+(the|a|an|it)\b',
+        r'\b(install|uninstall|mount|unmount|fasten|unfasten)\s+(the|a|an|it)\b',
+        
+        # Instructional phrases (action + object)
+        r'\b(open|close)\s+(the|a|an)\s+(door|valve|panel|switch|breaker)\b',
+        r'\b(apply|place|position|adjust)\s+(the|a|an|your)\b',
+        
+        # Imperative forms suggesting instructions
+        r'\byou\s+(should|must|need to)\s+(disconnect|lock|attach|turn|switch|press|isolate|remove|connect|verify|check|test|inspect)\b',
+        r'\b(first|then|next|finally),?\s+(disconnect|lock|attach|turn|switch|press)\b',
     ]
     
     SYSTEM_PROMPT = """You are a Manufacturing SOP & Safety Explanation Assistant designed for enterprise training environments.
