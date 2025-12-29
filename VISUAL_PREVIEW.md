@@ -142,7 +142,7 @@
 │  │ requirements, emergency protocols...       │  │          │  │
 │  └────────────────────────────────────────────┘  └──────────┘  │
 │                                                                  │
-│  ℹ Press Enter to send • Shift+Enter for new line              │
+│  ℹ Press  • Shift+Enter for new line              │
 │                                                                  │
 │  Textarea: 2px steel border with blue focus ring                │
 │  Button: Safety blue, bold uppercase, hover effect              │
